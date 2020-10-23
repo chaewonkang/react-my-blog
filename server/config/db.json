@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "ckang",
+    "password": "12341234",
+    "database": "example_db",
+    "host": "test-db.chdm3antaua3.ap-northeast-2.rds.amazonaws.com",
+    "port": 3306,
+    "dialect": "mysql"
+  }
+}
