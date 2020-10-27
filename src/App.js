@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+import { Route, Link, Switch } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
+
+import { Home, Test } from "./inc";
 
 class App extends Component {
   constructor(props) {
@@ -93,11 +96,19 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h3>
-          {" "}
-          Welcome to <u> sejun </u> Blog!{" "}
-        </h3>
-        <h5> https://sejun3278.blog.me/ </h5>
+        <Route path="/" conponent={Home} exact />
+        <Switch>
+          <Route path="/test/:data" component={Test} />
+          <Route path="/test" component={Test} />
+        </Switch>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/test">Test</Link>
+          </li>
+        </ul>
         <br />
         <form method="POST" onSubmit={this._addData}>
           <input
